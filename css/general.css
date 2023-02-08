@@ -1,0 +1,220 @@
+:root {
+  --primary: #e67e22;
+  --secondary: #cf711f;
+  --button: #fdf2e9;
+  --body: #555;
+  --heading: #333;
+  --title: #00425a;
+
+  /* --primary: #00425a;
+  --secondary: #1f8a70;
+  --button: #fdf2e9;
+  --body: #555;
+  --heading: #333; */
+
+  /* --primary: #012442;
+  --secondary: #cf711f;
+  --button: #fdf2e9;
+  --body: #5ba0bf;
+  --heading: #e38664; */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px */
+  /* 10px / 16px = 0.625 = 62.5 */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--body);
+  overflow-x: hidden;
+}
+
+/**********************************/
+/* GENERAL REUSABLE COMPONENTS */
+/**********************************/
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 4.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  color: var(--secondary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  transition: all 0.3s linear;
+  /* Only neccessary for .btn */
+  border: none;
+  cursor: pointer;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: var(--secondary);
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: var(--title);
+}
+
+.btn-outline:hover,
+.btn-ouline:active {
+  background-color: var(--button);
+  /* Trick to add border inside */
+  box-shadow: 0 0 0 3px #ffff;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.3s linear;
+}
+
+.link:hover,
+.link:active {
+  color: var(--secondary);
+  border-bottom: 1px solid transparent;
+}
+
+*:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5); */
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: var(--primary);
+}
+
+/********************/
+/* HELPER CLASSES */
+/********************/
+
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
